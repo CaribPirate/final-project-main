@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="style.css">
+  <title>Math, Inc.</title>
+</head>
+
+<body>
+  <h1>Math, Inc.</h1>
+  <button class="tablink" onclick="openPage('Home', this, 'purple')" id="defaultOpen">Home</button>
+  <button class="tablink" onclick="openPage('Calc', this, 'rgb(220, 0, 0)')">Simple Calculator</button>
+  <button class="tablink" onclick="openPage('Gen', this, 'rgb(0, 128, 0)')">Random Number
+    Generator</button>
+  <button class="tablink" onclick="openPage('Stopwatch', this, 'blue')">Stopwatch</button>
+  <button class="tablink" onclick="openPage('Timer', this, 'orange')">Timer</button>
+
+  <div id='Home' class='tabcontent'>
+    <h2>Welcome</h2>
+    <p class='welcome-text'>Why hello there. Welcome to Mathematics Incorporated. We specialize in, you guessed it,
+      math. Boring right? <br><br> 
+      Yeah, but here's the thing you don't know. Math is everywhere, from cooking, to taking the bus, to using your computer right now. <br><br>
+      To get a glimpse into the world of math, I made a small website showcasing the various branches of mathematics. <br><br> 
+      Sincerely,<br>
+      Guy Fawkes(Founder and CEO and CFO and Co-founder and Owner) <br><br>
+      PS. This website is in development; more tabs will come!</p>
+    <p><button class="start" onclick="openPage('Calc', this, 'rgb(255, 0, 0)')">Get started</button></p>
+  </div>
+
+  <div id="Calc" class="tabcontent">
+    <h2>Simple Calculator</h2>
+    <p>Note: '**' means to the power of the next number.</p>
+    <div class="calculator">
+      <div>
+        <label id='preview-ans' preview='Ans = '>
+          <input type="text" id="calculator-display" placeholder="0" disabled>
+        </label>
+      </div>
+
+      <div class="calculator-keys">
+        <button id="pi" value='π'>π</button>
+        <button id="par1" value='('>(</button>
+        <button id="par2" value=')'>)</button>
+        <button id="back" value=' '>
+          <<</button> <button id="add" value='+'>+
+        </button>
+        <button id="sub" value='-'>-</button>
+        <button id="mul" value='*'>&times;</button>
+        <button id="div" value='/'>÷</button>
+        <button id='seven' value='7'>7</button>
+        <button id='eight' value='8'>8</button>
+        <button id='nine' value='9'>9</button>
+        <button id="sqrt" value='%'>√</button>
+        <button id='four' value='4'>4</button>
+        <button id='five' value='5'>5</button>
+        <button id='six' value='6'>6</button>
+        <button id='one' value='1'>1</button>
+        <button id='two' value='2'>2</button>
+        <button id='three' value='3'>3</button>
+        <button id='zero' value='0'>0</button>
+        <button id="decimal" value='.'>.</button>
+        <button id="clear" value='c'>AC</button>
+        <button id="equal" value='='>=</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="Gen" class="tabcontent">
+    <h2>Random Number Generator</h2>
+    <h3 class='minmax'>Enter the Minimum: <input id='min' type="number"></h3>
+    <h3 class='minmax'>Enter the Maximum: <input id='max' type="number"></h3>
+    <h3>
+      Round to the nearest whole number?
+      <label class="switch">
+        <input id='round' type="checkbox"'>
+        <span class="slider round"></span>
+      </label>
+    </h3>
+    <h3>How many decimal places? (leave blank/0 for default or to use toggle above) <input id = 'round-value' type="number"></h3>
+    <button id='rand-gen'>Generate</button>
+    <p id='rand-error'></p>
+    <p id='rand-num'>--</p>
+
+  </div>
+
+  <div id="Stopwatch" class="tabcontent">
+    <h2>Stopwatch</h2>
+    <p>You can change the tab; it will keep running :)</p>
+    <p class='stopwatch'><span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>:<span
+        id="tens">00</span></p>
+    <button id="button-start">Start</button>
+    <button id="button-stop">Stop</button>
+    <button id="button-reset">Reset</button>
+    <button id="button-lap">Lap</button>
+    <ul id="laps"></ul>
+  </div>
+
+  <div id="Timer" class="tabcontent">
+    <h2>Timer</h2>
+    <div id="overlay">
+      <div id="text">3</div>
+    </div>
+    <p>You can change the tab; it will keep running :) <br> Note: Decimals are accepted.</p>
+    <div class='timer-input'>
+      <p>Seconds: <input type="number" id="sec-input"></p>
+      <p>Minutes: <input type="number" id="min-input"></p>
+      <p>Hours: <input type="number" id="hr-input"></p>
+    </div>
+    <p id='timer-error'></p>
+    <p id='timer'>00:00:00:00</p>
+    <button id="button-start1">Start</button>
+    <button id="button-stop1">Stop</button>
+    <button id="button-reset1">Reset</button>
+
+  </div>
+
+
+
+  <!-- Load JavaScript -->
+  <script src="calc.js"></script>
+  <script src="gen.js"></script>
+  <script src="stop.js"></script>
+  <script src="timer.js"></script>
+</body>
+
+</html>

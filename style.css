@@ -1,0 +1,364 @@
+/* Home */
+
+.welcome-text {
+  font-size: 30px;
+  text-align: left;
+  margin: 50px;
+}
+
+.start {
+  width: auto;
+  height: auto;
+  padding: 20px;
+  background-color: purple;
+}
+
+/* Calculator */
+.calculator-keys {
+  display: grid;
+  grid: auto auto auto auto/auto auto;
+}
+
+#equal {
+  grid-column: 4;
+  grid-row-start: 4;
+  grid-row-end: 7;
+  height: 308px;
+  border-radius: 5px 5px 30px 5px;
+}
+
+.calculator {
+  width: 612px;
+  margin: 0px auto;
+}
+
+button {
+  width: 150px;
+  height: 100px;
+  border-radius: 5px;
+  background-color: #f4511e;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  margin: 2px;
+  opacity: 0.6;
+  transition: 0.2s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 1
+}
+
+button:focus {
+  outline: 0;
+}
+
+button,
+h2,
+#calculator-display {
+  font-size: 50px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1 {
+  font-size: 60px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#calculator-display {
+  width: 614px;
+  height: 100px;
+  border: 1px solid #f4511e;
+  text-align: right;
+  padding-right: 10px;
+  border-radius: 30px 30px 5px 5px;
+}
+
+#zero {
+  border-radius: 5px 5px 5px 30px;
+}
+
+label,
+#calculator-display {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+}
+
+label::after {
+  content: attr(preview);
+  position: absolute;
+  top: 4px;
+  right: 20px;
+  font-size: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  display: block;
+  color: rgba(0, 0, 0, 0.4);
+  font-weight: bold;
+}
+
+/* Random Number Generator*/
+
+.minmax {
+  font-size: 32px;
+}
+
+#min,
+#max {
+  height: 32px;
+  width: 200px;
+  border-radius: 30px;
+  border: 1px solid green;
+  font-size: 32px;
+  padding-left: 5px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+input:focus {
+  outline: none;
+}
+
+#rand-gen {
+  width: auto;
+  background-color: rgba(53, 163, 53, 0.6);
+  padding: 10px 30px;
+}
+
+#round-value {
+  border-radius: 20px;
+  width: 50px;
+  padding: 10px;
+  font-size: 20px;
+  border: 1px solid green;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  padding-top: 2px;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked+.slider {
+  background-color: green;
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px green;
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+#rand-error {
+  font-size: 30px;
+  color: red;
+}
+
+#rand-num {
+  font-size: 130px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin-top: 3px;
+  word-wrap: break-word;
+}
+
+
+/* stopwatch */
+
+.stopwatch {
+  font-size: 120px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#button-start,
+#button-start1 {
+  background-color: green;
+}
+
+#button-stop,
+#button-stop1 {
+  background-color: red;
+}
+
+#button-reset,
+#button-reset1 {
+  background-color: blue;
+}
+
+ul {
+  font-size: 100px;
+  list-style-type: none;
+}
+
+/* timer */
+
+#overlay {
+  position: fixed;
+  /* Sit on top of the page content */
+  display: none;
+  /* Hidden by default */
+  width: 100%;
+  /* Full width (cover the whole page) */
+  height: 100%;
+  /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Black background with opacity */
+  z-index: 2;
+  /* Specify a stack order in case you're using a different order for other elements */
+}
+
+#text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 300px;
+  color: white;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.timer-input {
+  border: 1px solid black;
+  margin: auto;
+  width: 200px;
+  padding: 30px;
+  border-radius: 30px;
+  background-color: orange;
+  opacity: 0.6;
+}
+
+p {
+  font-size: 18px;
+}
+
+#sec-input,
+#min-input,
+#hr-input {
+  border-radius: 20px;
+  width: 50px;
+  padding: 10px;
+  font-size: 20px;
+  border: 1px solid black;
+}
+
+#timer {
+  font-size: 120px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin-top: 0px;
+}
+
+#timer-error {
+  color: red;
+}
+
+/* Set height of body and the document to 100% to enable "full page tabs" */
+body,
+html {
+  height: 100%;
+  margin: 0;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 20%;
+  margin: 0px;
+  border-radius: 0px;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: auto;
+}
+
+#Home {
+  background-color: rgb(255, 183, 255);
+  height: auto;
+  word-wrap: break-word;
+}
+
+#Calc {
+  background-color: rgb(255, 200, 200);
+}
+
+#Gen {
+  background-color: rgb(132, 230, 132);
+}
+
+#Stopwatch {
+  background-color: rgb(200, 200, 255);
+}
+
+#Timer {
+  background-color: rgb(255, 222, 161);
+}
